@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- crousal start-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../static/images/asset 7.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/th.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/images/asset 7.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- crousal end-->
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 mx-auto">
+            <div class="row">
+                <div class="col-md-3 bg-danger py-2">
+                    <h4>Notification</h4>
+                </div>
+                <div class="col-md-9 py-2 ">
+                    <marquee behavior="" direction="."  class="bg-body-tertiory">
+                        {% for n in noti %}
+                            <span><a href="{{n.doc.url}}" target="_blank" style="text-decoration: none; color: black; font-size: 20px;">  {{n.text}}</a></span>
+                        {% endfor %}
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- notification -->
+
+<!-- notification -->
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-12" style="min-height: 500px;">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <h1 class="text-center" style="font-size: 45px; font-weight: bolder;">Welcome to Seth Anandram Jaipuria
+                    School, Sadhu Campus - Barabanki</h1>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="container">
+            <div class="row " style="min-height: 550px;">
+                <div class="col-sm-6">
+
+                    <iframe width="570" height="315" style="margin-left: 20px;"
+                        src="https://www.youtube.com/embed/M1156iKJgNo?si=drNtLw7EFUveaoA3" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p style="font-size: 20px; text-align: justify; width: 570px; margin-left: 20px ;">We, at <b> Seth
+                            Anandram Jaipuria School, Sadhu Campus - Barabanki, </b>are committed to our motto
+                        ‘<b>Empower, Enthuse and Excel’</b> in providing quality education and teaching every child the
+                        necessary values to guide him/her through the journey of life. The school endows education for
+                        LIFE! Our prime mission is to create opportunities through a stimulating, safe, collaborative,
+                        and supportive environment that help student in attaining personal mastery, team spirit, and
+                        academic excellence.</p>
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="card " style="height:550px; margin-left: 35px;">
+                        <img src="../static/images/asset 1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="#" class="card-text" style="font-size: 25px; text-decoration: none    ;">3rd
+                                Refresher Training Certificate Distribute</a>
+                            <br>
+                            <br>
+
+                            <p>........</p>
+
+                            <a href="#" style="text-decoration: none; font-size: 20px; color: gray;">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr style="height: 5px; font-size: 5px;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-sm-6">
+                    <img src="../static/images/asset 2.png" alt="" width="570 " class="img-fluid hover-zoom">
+                    <h3 style="font-weight: 700;">PRE-PRIMARY & PRIMARY SCHOOL</h3>
+                    <p style="color: brown; font-size: 12px; font-weight: 700;">_______</p>
+                    <h4 style="text-align: justify; width: 570px;">The goal of education is not to increase the amount
+                        of
+                        knowledge but to create the possibilities for a child to invent and discover, to create
+                        individuals who are capable of doing.</h4>
+                </div>
+                <div class="col-sm-6 ">
+                    <img src="../static/images/asset 3.png" alt="" width="550px">
+                    <h3 style="font-weight: 700; margin-left: 35px  ; ">MIDDLE SCHOOL</h3>
+                    <p style="color: brown; font-size: 12px; font-weight: 700; margin-left: 35px;">_______</p>
+                    <h4 style="text-align: justify; width: 570px; margin-left: 35px;">Student-centered teaching strategies focus
+                        instruction on the needs, preferences, and interests of the learner. Teachers act as
+                        facilitators of the learning process.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluit">
+            <div class="row">
+                <!-- building -->
+                <div class="col-sm-12" style="background: url(../static/images/building.jpeg);; height: 720px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 text-light">
+                                <div class="text mt-5" style="  height: 300px;">
+                                    <h1>UNIQUE FEATURES</h1>
+                                    <h4>Seth Anandram Jaipuria School, Sadhu Campus – Barabanki</h4>
+                                    <ul style="list-style: none; font-size: 25px; font-weight: 400; line-height: 30px;">
+                                        <li><i class="fa-solid fa-angles-right"></i> &nbsp; Multipurpose Playground</li>
+                                        <br>
+                                        <li><i class="fa-solid fa-angles-right"></i> &nbsp; RJ Studio</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Computer Lab</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Art & Craft room</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Composite Science Lab</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Music Room</li>
+                                        <br>
+                                        <li><i class="fa-solid fa-angles-right"></i> &nbsp; Dance Room</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i>&nbsp; Well Stocked Library</li>
+                                        <br>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 text-light">
+                                <div class="text mt-5" style="  height: 300px;">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <ul style="list-style: none; font-size: 25px; font-weight: 400; line-height: 30px;">
+                                        <li><i class="fa-solid fa-angles-right"></i> &nbsp; Monitored Surveillance &
+                                            Security</li>
+                                        <br>
+                                        <li><i class="fa-solid fa-angles-right"></i> &nbsp;GPS tracked School buses</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Outdoor Kids Play Zone</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; School Infirmary</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Kids Activity Room</li>
+                                        <br>
+                                        <li> <i class="fa-solid fa-angles-right"></i> &nbsp; Badminton Court</li>
+                                        <br>
+                                        <li><i class="fa-solid fa-angles-right"></i> &nbsp; Upcoming facilities:
+                                            Basketball
+                                            Arena *</li>
+                                        <br>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12"
+                    style="background: url(../static/images/asset\ 11.jpeg); width: 100%; height: 150px;">
+
+                </div>
+                <div class="hr" style="height: 10px; color: red; background-color: red;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'teacherbase.html' %}
+{% load static %}
+{% block teacher %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">
+            Add Study Material</h1>
+       <form  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table w-75 mx-auto mt-5 table-bordered">
+            <tr>
+                <td>Enter title</td>
+                <td><input type="text" name="title" class="form-control" id=""></td>
+            </tr>
+            <tr>
+                <td>Enter class</td>
+                <td><input type="text" name="tclass" value="{{teacher.tclass}}" class="form-control" id=""></td>
+            </tr>
+            <tr>
+                <td>Upload file</td>
+                <td><input type="file" name="sm" class="form-control" id=""></td>
+            </tr> <tr>
+                
+                <td colspan="2" class="text-center">
+                    <button class="btn btn-primary py-2 px-3">Upload</button>
+                </td>
+            </tr>
+
+
+        </table>
+
+
+       </form>
+
+    </div>
+</div>
+{% endblock %}

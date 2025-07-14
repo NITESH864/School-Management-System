@@ -1,0 +1,59 @@
+{% extends 'adminbase.html' %}
+{% load static%}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">
+            View student
+        </h1> 
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>S.No</th>
+                    <th>Roll no</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Mother Name</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Contact No</th>
+                    <th>Email</th>
+                    <th>class</th>
+                    <th>Address</th>
+                    <th>Paid fees</th>
+                    <th>Due fees</th>
+                    <th>Password</th>
+                    <th colspan="2">Action</th>
+                    
+                </tr>
+                {% for s in st %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{s.rollno}}</td>
+                    <td>{{s.name}}</td>
+                    <td>{{s.fname}}</td>
+                    <td>{{s.mname}}</td>
+                    <td>{{s.gender}}</td>
+                    <td>{{s.dob}}</td>
+                    <td>{{s.contactno}}</td>
+                    <td>{{s.emailaddress}}</td>
+                    <td>{{s.sclass}}</td>
+                    <td>{{s.address}}</td>
+                    <td>{{s.feepaid}}</td>
+                    <td>{{s.duefees}}</td>
+                    <td>{{s.password}}</td>
+                    <td><a href="{%url 'adminapp:delst' id=s.id %}"><button class="btn btn-danger btn-sm">Delete</button></a>
+                    </td>
+                    <td>
+                    <a href="{% url 'adminapp:editstudent' id=s.id %}"><button class="btn btn-success btn-sm">Edit</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+              
+            </table>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

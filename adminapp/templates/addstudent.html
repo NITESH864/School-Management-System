@@ -1,0 +1,115 @@
+{% extends 'adminbase.html' %}
+{% load static%}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">
+            add student
+        </h1> 
+        <form action="" method="post">
+            {% csrf_token %}
+            {% if msg %}
+            <h4 class="bg-danger bg-outline-danger">{{msg}}</h4>
+            {% endif %}
+            <table class="table table-bordered">
+                <tr>
+                    <td>Enter Roll No</td>
+                    <td>
+                        <input type="text" name="rollno"   class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Name</td>
+                    <td>
+                        <input type="text" name="name"   class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Father Name</td>
+                    <td>
+                        <input type="text" name="fname"  class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mother Name</td>
+                    <td>
+                        <input type="text" name="mname"   class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        male:
+                        <input type="radio" name="gender" value="male"  id="">
+                        Female:
+                        <input type="radio" name="gender" value="female"  id="">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td>
+                        <input type="date" name="dob"   class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact No</td>
+                    <td>
+                        <input type="number" name="contactno"  class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email Address </td>
+                    <td>
+                        <input type="email" name="emailaddress"  required class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select class </td>
+                    <td>
+                        <select name="sclass" id="" class="form-control">
+                            <option value="">select Teacher of Student</option>
+                            {% for c in cl %}
+                            <option value="{{c.class_name}}">{{c.class_name}}</option>
+                            
+                            {% endfor %}
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address </td>
+                    <td>
+                        <textarea name="address" class="form-control" id=""></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>paid fees </td>
+                    <td>
+                        <input type="number" name="feepaid"  class="form-control" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Due Fees </td>
+                    <td>
+                        <input type="number" name="duefees"  class="form-control" id="">
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>Upload pic</td>
+                    <td><input type="file" name="pic" class="form-control" ></td>
+                </tr> -->
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <button type="submit" class="btn form-control btn-success">Add</button>
+                    </td>
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+</div>
+{% endblock %}

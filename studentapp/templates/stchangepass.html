@@ -1,0 +1,38 @@
+{% extends 'studentbase.html' %}
+{% load static%}
+{% block student %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">
+           Change Password
+        </h1> 
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {% if msg %}
+            <p class="text-light bg-danger" >{{msg}}</p>
+            {% endif %}
+        <table class="table table-bordered"> 
+            <tr>
+                <td>Enter old Password</td>
+                <td><input type="text" class="form-control" name="oldpassword"></td>
+            </tr>
+            <tr>
+                <td>Enter New Password</td>
+                <td><input type="text" class="form-control" name="newpassword"></td>
+            </tr>
+            <tr>
+                <td>confirm New Password</td>
+                <td><input type="password" class="form-control" name="cnfpassword"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="submit" class="btn btn-success" ></td>
+            </tr>
+        </table>    
+        
+        </form>
+    </div>
+</div>
+{% endblock %}

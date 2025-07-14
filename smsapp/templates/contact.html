@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-12" style="min-height: 500px;">
+       
+        <div class="wpb_map_wraper ">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d263.812639758713!2d81.21536366866349!3d27.174355695425646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSETH%20ANANDRAM%20JAIPURIA%20SCHOOL%20%20SADHU%20CAMPUS%2C%20BARABANKI%20%20%20656G%2B68W%2C%20Fatehpur%20-%20Mahmudabad%20-%20Bhagauli%20Rd%2C%20Jhansa%2C%20Karsabhari%2C%20Uttar%20Pradesh%20225305%2C%20India%20Lat%2027.211205%C2%B0%20Long%2081.175397%C2%B0!5e0!3m2!1sen!2sin!4v1717147346922!5m2!1sen!2sin"
+                width="100%" height="450" style="border: 0px; pointer-events: none;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm-6" style="height:500px;">
+
+                <div class="card">
+
+
+                    <style>
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                            font-family: "Poppins", sans-serif;
+                            text-decoration: none;
+                        }
+
+
+
+                        .card {
+                            width: auto;
+                            height: 450px;
+                            border: 2px solid #005baa;
+                            background-color: white;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 20px;
+                            border-radius: 3px;
+                        }
+
+                        .card h2 {
+                            margin-bottom: 10px;
+                        }
+
+                        .card a.fp {
+                            width: 100%;
+                            display: flex;
+                            color: #5881D0;
+                        }
+
+                        .login_register {
+                            display: flex;
+                            width: 100%;
+                            border: 1px solid rgba(221, 221, 221, 1);
+                            border-radius: 15px;
+                            margin: 20px 0;
+                        }
+
+                        .login_register a {
+                            font-size: 1em;
+                            padding: 10px 55px;
+                            border: none;
+                            width: 50%;
+                        }
+
+                        .login_register a.login {
+                            border-radius: 15px;
+                            background-color: transparent;
+                            color: black;
+                        }
+
+                        .login_register a.register {
+                            border-radius: 15px;
+                            background: #005baa;
+                            color: white;
+                        }
+
+                        .form {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                        }
+
+                        .form input {
+                            padding: 10px;
+                            border-radius: 5px;
+                            border: 1px solid #DDDDDD;
+                            color: black;
+                            font-family: "Roboto Mono", sans-serif;
+                            box-shadow: 1px 5px 9px rgba(211, 211, 211, .7);
+                        }
+
+                        .form input.email {
+                            margin-bottom: 15px;
+                        }
+
+                        .form input.pass {
+                            margin-bottom: 15px;
+                        }
+
+                        .form input.comfirm_pass {
+                            margin-bottom: 5px;
+                        }
+
+                        .login_btn {
+                            font-size: 20px;
+                            color: white !important;
+                            border-radius: 15px;
+                            border: none;
+                            background-color: #005baa;
+                            width: 100%;
+                            padding: 10px;
+                            margin-top: 3px;
+                            margin-bottom: 3px;
+                            background: #005baa;
+                            box-shadow: 1px 5px 9px rgba(211, 211, 211, .9);
+                        }
+                    </style>
+
+                    <form class="form" action="" method="post">
+                        {% csrf_token %}
+
+                        <h2>Contact Now</h2>
+                        <input type="text" placeholder="Name*" class="email" name="name" required="">
+                        <!-- <label for="gender">gender</label> -->
+                        <!-- <input type="radio" name="gender" placeholder="gender" class="form-check"> -->
+                        <input type="text" placeholder="Email*" class="email" name="email" required="">
+                        <input type="text" placeholder="Phone*" class="email" name="Contactno" required="">
+                        <input type="text" placeholder="Admission Query" class="email" name="enquirytext">
+                        <input type="submit" class="login_btn" name="submit" value="Submit">
+                            
+                  
+                    </form>
+
+
+
+                </div>
+            </div>
+            <div class="col-sm-6 ">
+                <div class="contact-info" style="margin-left: 25px;">
+                    <h1 style="font-weight: 600;">Contact Info</h1>
+                    <h3 style="color: gray;"><span style="font-weight: 600;">Address:</span> Seth Anandram Jaipuria
+                        School, Sadhu Campus, Barabanki </h3>
+                    <h4 style="color: gray;">Village -Jhansapurwa, Post-Madanpur, Tehsil-Fatehpur, Barabanki.
+                        Pincode-225305</h4>
+                    <h4 style="color: gray;">
+                        <b> Phone:</b> 9044554046, 9044554045
+                    </h4>
+                    <h4 style="color: gray;">
+                        admission.sadhucampus@jaipuria.school</h4>
+                    <h1 ><b>School Operational Timing</b></h1>
+                    <h4><b>Summer :</b> 08:00 am – 02:00 pm</h4>
+                    <h4>
+                      <b>  Winters :</b> 09:00 am – 03:00 pm</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+{% endblock %}

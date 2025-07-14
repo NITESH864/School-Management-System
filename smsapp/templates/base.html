@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management system</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body style="font-family: Open Sans, sans-serif;">
+    <div class="col-sm-12">
+        <span>
+            <p class="bg-primary text-center" style="font-size: 20px;"> <i class="fa-solid fa-phone"></i>
+                9044554046&nbsp;,9044554045 |&nbsp;&nbsp; <i class="fa-solid fa-envelope"></i>
+                &nbsp;&nbsp;admission.sadhucampus@jaipuria.school </p>
+        </span>
+    </div>
+
+    <div class="container-fluid">
+
+
+        <div class="row">
+
+
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+
+
+                <div class="container-fluid">
+
+
+                    <a class="navbar-brand px-3" href="#"><img src="../static/images/asset 0.jpeg" alt="" height="90px"
+                            style="margin-left: 50px;"></a>
+
+
+
+
+
+                    <div class="nav-2 " style="margin-right: 100px;">
+
+
+                        <ul class="navbar-nav  mb-2 mb-lg-0 text-light" style="font-size: 20px;">
+                            <li class="nav-item rounded">
+                                <a class="nav-link rounded " aria-current="page" href="{% url 'index' %}">Home</a>
+                            </li>
+
+                            <li class="nav-item dropdown rounded">
+                                <a class="nav-link rounded" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About us
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item rounded" href="{% url 'about2'%}">Vision and mission</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item rounded" href="{% url 'about3'%}">About School</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'about4'%}">Founder's message</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'about5'%}">Chairman's message</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'about6'%}">Principal's message</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'about7'%}">School Management team</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="https://jaipuria.edu.in/" target="_blank">group
+                                            institution</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item rounded">
+                                <a class="nav-link rounded" href="{%url 'acadmic'%}"> Academics</a>
+                            </li>
+                            <li class="nav-item dropdown rounded">
+                                <a class="nav-link rounded" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Facilities
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{% url 'transport' %}">Transport</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'medical' %}">Medical Room</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'smartclass'%}">Smart Class</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'otfacilities'%}">Other Facilities</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown rounded">
+                                <a class="nav-link rounded" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Admission
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{%url 'admission1'%}">Admission Procedure</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Download Prospectus</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'admission2' %}">Rules & Regulation</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'admission3'%}">Fee Structure</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown rounded ">
+                                <a class="nav-link rounded" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Media
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{% url 'media1'%}">News Events</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'media2'%}">Vedio gallary</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item rounded">
+                                <a class="nav-link rounded" href="{%url 'carrier' %}">Carrier</a>
+                            </li>
+                            <li class="nav-item rounded">
+                                <a class="nav-link rounded" href="{% url 'contact'%}">Contact us</a>
+                            </li>
+
+                          
+                                <a href="{% url 'login'%}" class="nav-link">
+                                    <button class="btn bg-primary py-2" style="font-size: 20px; color: white;"> ERP Login</button>
+                                </a>
+                            
+                        </ul>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+
+
+    </div>
+
+    <!-- Crousel  start-->
+    <!-- <div class="container-fluid"> 
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../static/images/asset 7.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/images/th.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/images/asset 7.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- slider end -->
+    <!-- main strat -->
+
+    {% block body %}
+
+
+    {% endblock %}
+
+
+
+    <!-- main end -->
+
+    <!-- footer start -->
+    <div class="container-fluid">
+        <div class="row  text-light" style="height: 400px; background-color: #212529;">
+
+            <div class="container">
+                <div class="row px-5">
+                    <div class="col-sm-4   text-light mt-5" style="background-color: #212529;">
+                        <h2 class="text-start"> ABOUT US</h2>
+                        <p>Seth Anandram Jaipuria School, Sadhu Campus – Barabanki, follows the motto ‘Empower, Enthuse
+                            and
+                            Excel’ by sparking the students’ curiosity and enthusing and empowering them with knowledge
+                            to excel
+                            in all aspects of school education. We create life-long learners.
+
+                        </p>
+                    </div>
+                    <div class="col-sm-4 text-light mt-5" style="background-color: #212529;">
+                        <h2>QUICK LINKS</h2>
+                        <ul style="list-style: none;">
+                            <li><i class="fa-solid fa-angle-right"></i> Feedback Form</li>
+                            <hr>
+                            <li class=""> <i class="fa-solid fa-angle-right"></i>Career
+                            </li>
+                            <hr>
+                            <li><i class="fa-solid fa-angle-right"></i> Fee Structure</li>
+                            <hr>
+                            <li><b> <i class="fa-solid fa-angle-right"></i> Parent Portal</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 text-light mt-5 " style="background-color: #212529;">
+                        <h2>Contact Us
+                        </h2>
+                        <p><b><i class="fa-solid fa-circle-dot"></i>&nbsp;&nbsp;Seth Anandram Jaipuria School, Sadhu
+                                Campus,
+                                Barabanki:</b><br> Village -Jhansapurwa,
+                            Post-Madanpur,Tehsil-Fatehpur,
+                            Barabanki Pincode-225305
+                            <br>
+                            <i class="fa-brands fa-whatsapp"></i>&nbsp;&nbsp; Phone: 9044554046, 9044554045 <br>
+                            <i class="fa-regular fa-clock"></i> &nbsp;&nbsp; Working Days/Hours: Summer- 08:00 am –
+                            02:00 pm
+                            <br>
+                            Winters- 09:00 am – 03:00 pm
+                        </p>
+                        <h1><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;<i
+                                class="fa-brands fa-square-youtube"></i>&nbsp;&nbsp;<i
+                                class="fa-brands fa-square-instagram"></i>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-12">
+                <div class="hr bg-danger" style="height: 10px; width: 100%;">
+
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <p>© Copyright 2024. All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer end -->
+
+
+    <!-- <h1 class="bg-danger">Welcome to my project</h1> -->
+
+
+    <script src="{% static 'js/bootstrap.bundle.js'  %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

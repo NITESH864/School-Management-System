@@ -1,0 +1,85 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 mt-5">
+      
+        <style>
+            .clist li a {
+                font-size: 20px;
+                text-decoration: none;
+            }
+        
+            .clist li {
+                padding: 10px;
+            }
+            .clist li p{
+                color: #777;
+            }
+            .carrier-form{
+                background-color: white;
+                border: 3px solid blue;
+                border-radius: 5px;
+                padding: 15px;
+                
+            }
+            .carrier-form button{
+                width: 380px;
+                padding: 10px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            .carrier-form input{
+                margin-bottom: 15px;
+                box-shadow: 1px 1px 5px #777;
+            }
+            .text-area{
+                margin-bottom: 15px;
+                box-shadow: 1px 1px 5px #777;
+            }
+            button{
+                margin-left: 150px;
+            }
+        </style>
+
+        <div class="carrier-form">
+            <h1>Edit student Form</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+            <b style="color: black;">Roll no</b>
+            <input type="text" class="form-control" name="rollno" value="{{stu.rollno}}" placeholder="" id="">
+            <b style="color: black;"> Name</b>
+            <input type="text" class="form-control" name="name" placeholder=" " value="{{stu.name}}" id="">
+                <b style="color: black;">Father Name</b>
+            <input type="text" class="form-control" name="fname" placeholder="" value="{{stu.fname}}" id="">
+           <b style="color: black;">Mother Name</b>
+            <input type="text" class="form-control" name="mname" placeholder="" value="{{stu.mname}}" id="">
+            <b style="color: black;">Gender</b>
+            <input type="text" class="form-control" value="{{stu.gender}}" name="gender" placeholder="" id="">
+            <b style="color: black;">Dob</b>
+            <input type="dob" name="dob" id="" value="{{stu.dob}}" class="form-control">
+            <b style="color: black;">Contact No</b>
+            <input type="number" name="contactno" id="" value="{{stu.contactno}}" class="form-control">
+            <b style="color: black;">Email address</b>
+            <input type="email" name="emailaddress" id="" value="{{stu.emailaddress}}" class="form-control">
+            <b style="color: black;">Address</b>
+            <textarea name="address" placeholder="" class="form-control text-area"  id="">{{stu.address}}</textarea>
+            <b style="color: black;">Student class</b>
+            <input type="text" name="sclass" id="" value="{{stu.sclass}}" class="form-control"> 
+            <b style="color: black;">Due Fees</b>
+            <input type="text" name="duefees" id="" value="{{stu.duefees}}" class="form-control">
+            <b style="color: black;">paid Fees</b>
+            <input type="text" name="feepaid" id="" value="{{stu.feepaid}}" class="form-control">
+            <b style="color: black;">created_date</b>
+            <input type="text" name="Created_date" id="" value="{{stu.created_date}}" class="form-control">
+            
+             <button class="btn btn-primary" >Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock%}
